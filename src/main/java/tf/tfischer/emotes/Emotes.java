@@ -10,7 +10,7 @@ import java.util.List;
 
 public final class Emotes extends JavaPlugin {
     private List<InterfaceInteraction> interactions = List.of(  new Bonk(),new Hug(), new Patting(), new Stare(), new Lick(),
-                                                                new Cuddle());
+                                                                new Cuddle(), new Yeet());
     @Override
     public void onEnable() {
         interactions.forEach(interaction -> getCommand(interaction.command()).setExecutor(interaction));
