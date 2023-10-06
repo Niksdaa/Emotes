@@ -11,7 +11,7 @@ import java.util.List;
 
 public final class Emotes extends JavaPlugin {
     private List<InterfaceInteraction> interactions = List.of(  new Bonk(),new Hug(), new Patting(), new Stare(), new Lick(),
-                                                                new Cuddle(), new Yeet());
+                                                                new Cuddle(), new Yeet(), new Bite(), new Knibble());
     private static Emotes plugin;
 
     @Override

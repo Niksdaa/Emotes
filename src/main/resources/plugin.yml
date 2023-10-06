@@ -3,6 +3,12 @@ version: '${project.version}'
 main: tf.tfischer.emotes.Emotes
 api-version: '1.19'
 commands:
+  smirk:
+    description: foo
+  knibble:
+    description: foo
+  bite:
+    description: foo
   bonk:
     description: foo
   cuddle:
