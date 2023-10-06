@@ -2,3 +2,21 @@ name: Emotes
 version: '${project.version}'
 main: tf.tfischer.emotes.Emotes
 api-version: '1.19'
+commands:
+  bonk:
+    description: foo
+  cuddle:
+    description: foo
+  hug:
+    description: foo
+  pat:
+    description: foo
+  stare:
+    description: foo
+  lick:
+    description: foo
+  disableinteractions:
+    description: foo
+  waitingtime:
+    description: Sets the waiting time for the interactions
+    permission: emotes.admin
