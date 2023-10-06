@@ -1,5 +1,7 @@
 package tf.tfischer.emotes.commands;
 
+import com.earth2me.essentials.Essentials;
+import com.earth2me.essentials.api.Economy;
 import net.md_5.bungee.api.chat.BaseComponent;
 import net.md_5.bungee.api.chat.ClickEvent;
 import net.md_5.bungee.api.chat.HoverEvent;
@@ -10,6 +12,7 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.command.TabCompleter;
 import org.bukkit.entity.Player;
+import tf.tfischer.emotes.Emotes;
 import tf.tfischer.emotes.util.Broadcaster;
 
 import java.util.*;
@@ -91,7 +94,10 @@ public abstract class AbstractInteraction implements InterfaceInteraction{
     public List<String> onTabComplete(CommandSender commandSender, Command command, String s, String[] strings) {
         String          search      = strings.length >= 1 ? strings[0] : "";
         List<Player>    disabled    = Broadcaster.disabled;
+        Essentials      ess         = Emotes.getEssentials();
+
         return Bukkit.getOnlinePlayers().stream()   .filter(player -> player.getName().startsWith(search) && !disabled.contains(player))
+                                                    .filter(player -> null == ess || !ess.getUser(player.getUniqueId()).isVanished())
                                                     .map(Player::getName).collect(Collectors.toList());
     }
 }
