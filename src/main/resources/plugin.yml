@@ -5,11 +5,7 @@ api-version: '1.19'
 commands:
   smirk:
     description: foo
-  knibble:
-    description: foo
-  bite:
-    description: foo
-  bonk:
+ bonk:
     description: foo
   cuddle:
     description: foo
