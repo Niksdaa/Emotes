@@ -71,8 +71,6 @@ public abstract class AbstractInteraction implements InterfaceInteraction{
             return true;
         }
 
-        lastInteraction.put(executor,new Date());
-
         if(strings.length == 0)
             return true;
         Player maybeInteraction = Bukkit.getPlayer(strings[0]);
@@ -84,6 +82,8 @@ public abstract class AbstractInteraction implements InterfaceInteraction{
             executor.sendMessage("§4You cant interact with §6" + interact.getName() + " §4because they have the function disabled.");
             return true;
         }
+
+        lastInteraction.put(executor,new Date());
 
 
         run();
