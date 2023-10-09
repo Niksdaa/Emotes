@@ -7,7 +7,7 @@ commands:
     description: foo
   smirk:
     description: foo
- bonk:
+  bonk:
     description: foo
   cuddle:
     description: foo
